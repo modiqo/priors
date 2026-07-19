@@ -179,6 +179,10 @@ function propose() {
   if (facets.scope !== 'repo-wide' && (!c.scope_ref || !c.scope_hash)) usage('non-repo-wide candidates need scope_ref and scope_hash');
   if (!c.claim) usage('candidate needs a claim');
   const st = state();
+  // overlay this run's staged dispositions — a same-run "fixed" must already
+  // count for the reversal/re-raise checks, or the veto has a blind spot
+  const dispFile = join(RUNS(), run, 'dispositions.jsonl');
+  if (existsSync(dispFile)) for (const d of loadLines(dispFile)) if (st[d.id]) st[d.id].status = d.to;
   const stagedFile = join(RUNS(), run, 'staged.jsonl');
   const staged = loadLines(stagedFile);
   for (const { prior, status } of Object.values(st)) {

@@ -7,9 +7,10 @@ import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, writeFileSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const KEEPER = resolve(import.meta.dirname, '../skills/priors/scripts/priors.mjs');
+const KEEPER = resolve(dirname(fileURLToPath(import.meta.url)), '../skills/priors/scripts/priors.mjs');
 function keeper(cwd, args, expectFail = false) {
   try {
     return { out: execFileSync('node', [KEEPER, ...args], { cwd, encoding: 'utf8' }), code: 0 };
