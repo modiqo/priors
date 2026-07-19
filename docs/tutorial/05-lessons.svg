@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="400" fill="#EDE9DC"/>
+  <text x="36" y="46" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="3" fill="#1A342E" opacity="0.75">05 · LESSONS — PAID FOR ONCE</text>
+  <line x1="36" y1="60" x2="884" y2="60" stroke="#1A342E" stroke-width="2"/>
+
+  <!-- run 1: flailing -->
+  <text x="70" y="105" font-size="16" font-weight="700" fill="#1A342E">First run — learning a tool the hard way:</text>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="14.5">
+    <rect x="70" y="122" width="360" height="34" fill="none" stroke="#1A342E" stroke-width="1.8"/>
+    <text x="86" y="145" fill="#DC5A17" font-weight="700">✗</text><text x="110" y="145" fill="#1A342E">tool export</text><text x="416" y="145" text-anchor="end" fill="#1A342E" opacity="0.6">unknown command</text>
+    <rect x="70" y="162" width="360" height="34" fill="none" stroke="#1A342E" stroke-width="1.8"/>
+    <text x="86" y="185" fill="#DC5A17" font-weight="700">✗</text><text x="110" y="185" fill="#1A342E">tool dump --all</text><text x="416" y="185" text-anchor="end" fill="#1A342E" opacity="0.6">breaks on parsing</text>
+    <rect x="70" y="202" width="360" height="34" fill="#1A342E"/>
+    <text x="86" y="225" fill="#8FA593" font-weight="700">✓</text><text x="110" y="225" fill="#EDE9DC">tool sync --json</text><text x="416" y="225" text-anchor="end" fill="#EDE9DC" opacity="0.75">works</text>
+  </g>
+
+  <!-- the locked lesson -->
+  <g stroke="#1A342E" stroke-width="2.5" fill="none">
+    <path d="M434 219 L500 219"/><path d="M492 213 L502 219 L492 225" fill="#1A342E" stroke="none"/>
+  </g>
+  <rect x="506" y="190" width="344" height="58" fill="#EFB61B"/>
+  <text x="678" y="214" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A342E">★ LESSON, WRITTEN DOWN</text>
+  <text x="678" y="236" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13.5" fill="#1A342E">“this tool: always sync --json”</text>
+
+  <!-- run 2 -->
+  <text x="70" y="298" font-size="16" font-weight="700" fill="#1A342E">Every run after — it reads the lesson before touching the tool:</text>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="14.5">
+    <rect x="70" y="314" width="360" height="34" fill="#1A342E"/>
+    <text x="86" y="337" fill="#8FA593" font-weight="700">✓</text><text x="110" y="337" fill="#EDE9DC">tool sync --json</text><text x="416" y="337" text-anchor="end" fill="#EDE9DC" opacity="0.75">first try</text>
+  </g>
+  <text x="506" y="337" font-size="15.5" font-style="italic" fill="#1A342E">If the tool ever changes and the lesson fails, it’s re-learned — once.</text>
+
+  <text x="460" y="384" text-anchor="middle" font-size="17" font-weight="700" fill="#1A342E">The cost of figuring things out is paid one time, not every session.</text>
+</svg>

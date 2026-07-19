@@ -124,6 +124,56 @@ test('depth gate: below-floor dredging on unchanged code is refused', (t) => {
   assert.match(ok.out, /staged/);
 });
 
+test('attention forgetting: archive after K missing runs, resurrect with history', (t) => {
+  const cwd = mkdtempSync(join(tmpdir(), 'priors-'));
+  keeper(cwd, ['init']);
+  writeFileSync(join(cwd, 'scopes.json'), JSON.stringify({}));
+  const r1 = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+  keeper(cwd, ['propose', cand(cwd, 'c.json', {
+    type: 'conclusion', scope_ref: 'src/gone.ts#fn', scope_hash: 'hash-v1',
+    claim: 'finding in code that will vanish', direction: 'hoist-resource', severity: 'major',
+  }), '--ns', 'review', '--run', r1.run]);
+  keeper(cwd, ['commit', '--run', r1.run]);
+  // five runs with the file gone — no disposition needed for missing scopes
+  for (let i = 0; i < 5; i++) {
+    const r = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+    keeper(cwd, ['commit', '--run', r.run]);
+  }
+  const asleep = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+  assert.equal(asleep.verify.length, 0, 'archived prior no longer exposed');
+  assert.equal(asleep.archived, 1, 'reported as resting, not vanished');
+  // the file returns (same content) — the prior wakes with its identity intact
+  writeFileSync(join(cwd, 'scopes.json'), JSON.stringify({ 'src/gone.ts#fn': 'hash-v1' }));
+  const awake = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+  assert.equal(awake.verify.length, 1);
+  assert.equal(awake.verify[0].id, 'P-0001', 'same id — memory, not a fresh review');
+  assert.equal(awake.verify[0].resurrected, true);
+});
+
+test('record forgetting: redact tombstones content, preserves sequence', (t) => {
+  const cwd = mkdtempSync(join(tmpdir(), 'priors-'));
+  keeper(cwd, ['init']);
+  writeFileSync(join(cwd, 'scopes.json'), JSON.stringify({}));
+  const r1 = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+  keeper(cwd, ['propose', cand(cwd, 'c.json', {
+    type: 'behavioral', scope_ref: 'some-cli', scope_hash: 'v1',
+    claim: 'secret token abc123 works for auth', direction: 'use-token',
+  }), '--ns', 'review', '--run', r1.run]);
+  keeper(cwd, ['commit', '--run', r1.run]);
+  keeper(cwd, ['redact', 'P-0001', '--because', 'captured a credential']);
+  const ledger = readFileSync(join(cwd, '.priors/ledger.jsonl'), 'utf8');
+  assert.ok(!ledger.includes('abc123'), 'content gone from working truth');
+  assert.match(ledger, /"redacted":true/);
+  assert.match(ledger, /"action":"redact"/, 'the removal is itself remembered');
+  // sequence intact: the next proposal is P-0002, not a reused id
+  const r2 = JSON.parse(keeper(cwd, ['relevant', '--ns', 'review', '--scopes', 'scopes.json']).out);
+  const next = keeper(cwd, ['propose', cand(cwd, 'c2.json', {
+    type: 'conclusion', scope_ref: 'src/a.ts#f', scope_hash: 'h1',
+    claim: 'a new finding', direction: 'rename', severity: 'major',
+  }), '--ns', 'review', '--run', r2.run]);
+  assert.match(next.out, /P-0002 staged/);
+});
+
 test('authority is never self-assigned', (t) => {
   const cwd = mkdtempSync(join(tmpdir(), 'priors-'));
   keeper(cwd, ['init']);

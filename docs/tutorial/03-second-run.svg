@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="470" fill="#EDE9DC"/>
+  <text x="36" y="46" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="3" fill="#1A342E" opacity="0.75">03 · THE SECOND RUN — HONOR THE OLD BEFORE SAYING ANYTHING NEW</text>
+  <line x1="36" y1="60" x2="884" y2="60" stroke="#1A342E" stroke-width="2"/>
+
+  <text x="70" y="105" font-size="16" font-weight="700" fill="#1A342E">Instead of a fresh list of 25, you get an honest delta:</text>
+
+  <!-- ledger rows -->
+  <g font-size="17">
+    <rect x="70" y="130" width="560" height="52" fill="#8FA593"/>
+    <text x="92" y="162" font-weight="700" fill="#1A342E">✓  22 fixed</text>
+    <text x="610" y="162" text-anchor="end" fill="#1A342E">acknowledged, by name</text>
+
+    <rect x="70" y="192" width="560" height="52" fill="none" stroke="#1A342E" stroke-width="2"/>
+    <text x="92" y="224" font-weight="700" fill="#1A342E">→  9 carried</text>
+    <text x="610" y="224" text-anchor="end" fill="#1A342E" opacity="0.8">same items as last run — never “new” again</text>
+
+    <rect x="70" y="254" width="560" height="52" fill="#EFB61B"/>
+    <text x="92" y="286" font-weight="700" fill="#1A342E">?  4 your call</text>
+    <text x="610" y="286" text-anchor="end" fill="#1A342E">answer once — it sticks forever</text>
+
+    <rect x="70" y="316" width="560" height="52" fill="#DC5A17"/>
+    <text x="92" y="348" font-weight="700" fill="#EDE9DC">＋  3 new</text>
+    <text x="610" y="348" text-anchor="end" fill="#EDE9DC">all in code your fixes touched</text>
+  </g>
+
+  <!-- gate annotation -->
+  <g>
+    <line x1="672" y1="130" x2="672" y2="308" stroke="#1A342E" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="694" y="200" font-size="14.5" fill="#1A342E" font-weight="700">the agent may not</text>
+    <text x="694" y="221" font-size="14.5" fill="#1A342E" font-weight="700">reach “new” until</text>
+    <text x="694" y="242" font-size="14.5" fill="#1A342E" font-weight="700">everything above</text>
+    <text x="694" y="263" font-size="14.5" fill="#1A342E" font-weight="700">is accounted for</text>
+    <path d="M694 286 L694 336 L678 336" stroke="#1A342E" stroke-width="2" fill="none"/>
+    <path d="M686 330 L676 336 L686 342" fill="#1A342E"/>
+  </g>
+
+  <text x="460" y="416" text-anchor="middle" font-size="17" fill="#1A342E">Runs get <tspan font-weight="700">shorter over time</tspan>. One day it says:</text>
+  <text x="460" y="444" text-anchor="middle" font-size="17" font-style="italic" font-weight="700" fill="#1A342E">“Everything settled still holds — nothing new.”  A memoryless agent can never say that.</text>
+</svg>

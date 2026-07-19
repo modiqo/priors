@@ -75,12 +75,19 @@ New this run: 3 (all in code your fixes touched)
 That `? need your call` moment is the whole trick: answer once, and the
 answer sticks forever — or until the code it's about changes.
 
+**Prefer pictures?** The whole system in six visuals:
+[docs/tutorial/TUTORIAL.md](docs/tutorial/TUTORIAL.md).
+
 ## The three words worth knowing
 
 - **A prior** — anything already settled: a finding, a decision, a lesson.
 - **Carried** — a prior that still applies; shown, never re-argued as new.
 - **Your call** — the only thing that can make a prior permanent. The agent
   can *suggest* a finding is obsolete; only you can dismiss it for good.
+
+(And one for later: **resting** — a prior whose code was deleted goes
+quiet after a few runs, and wakes with its memory if the code ever comes
+back. Nothing is ever silently forgotten.)
 
 Everything else — dispositions, facets, scope hashes, activation phases —
 lives in [PRIORS.md](PRIORS.md), the technical spec, for skill authors and

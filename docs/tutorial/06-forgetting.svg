@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="430" fill="#EDE9DC"/>
+  <text x="36" y="46" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="3" fill="#1A342E" opacity="0.75">06 · FORGETTING — THREE DOORS, NONE OF THEM SILENT</text>
+  <line x1="36" y1="60" x2="884" y2="60" stroke="#1A342E" stroke-width="2"/>
+
+  <!-- door 1: settled -->
+  <rect x="60" y="100" width="250" height="230" fill="none" stroke="#1A342E" stroke-width="2.5"/>
+  <rect x="60" y="100" width="250" height="40" fill="#8FA593"/>
+  <text x="185" y="126" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#1A342E">SETTLED</text>
+  <text x="185" y="185" text-anchor="middle" font-size="34" fill="#1A342E">✓</text>
+  <text x="185" y="230" text-anchor="middle" font-size="14.5" fill="#1A342E">Fixed, or no longer true.</text>
+  <text x="185" y="252" text-anchor="middle" font-size="14.5" fill="#1A342E">Stops acting —</text>
+  <text x="185" y="274" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A342E">stays in the book.</text>
+
+  <!-- door 2: resting -->
+  <rect x="335" y="100" width="250" height="230" fill="none" stroke="#1A342E" stroke-width="2.5"/>
+  <rect x="335" y="100" width="250" height="40" fill="#EFB61B"/>
+  <text x="460" y="126" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#1A342E">RESTING</text>
+  <path d="M475 168 a24 24 0 1 1 -26 -24 a19 19 0 0 0 26 24" fill="#1A342E"/>
+  <text x="460" y="230" text-anchor="middle" font-size="14.5" fill="#1A342E">The code it points at is gone.</text>
+  <text x="460" y="252" text-anchor="middle" font-size="14.5" fill="#1A342E">It goes quiet — and <tspan font-weight="700">wakes with</tspan></text>
+  <text x="460" y="274" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A342E">its memory if the code returns.</text>
+  <text x="460" y="305" text-anchor="middle" font-size="13" font-style="italic" fill="#1A342E" opacity="0.7">(restore an old file → its findings come back)</text>
+
+  <!-- door 3: redacted -->
+  <rect x="610" y="100" width="250" height="230" fill="none" stroke="#1A342E" stroke-width="2.5"/>
+  <rect x="610" y="100" width="250" height="40" fill="#1A342E"/>
+  <text x="735" y="126" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#EDE9DC">REDACTED</text>
+  <rect x="672" y="165" width="126" height="18" fill="#1A342E"/>
+  <text x="735" y="230" text-anchor="middle" font-size="14.5" fill="#1A342E">A secret slipped in.</text>
+  <text x="735" y="252" text-anchor="middle" font-size="14.5" fill="#1A342E">The content is removed —</text>
+  <text x="735" y="274" text-anchor="middle" font-size="14.5" font-weight="700" fill="#1A342E">the removal is remembered.</text>
+  <text x="735" y="305" text-anchor="middle" font-size="13" font-style="italic" fill="#1A342E" opacity="0.7">(human-only, with a reason)</text>
+
+  <text x="460" y="380" text-anchor="middle" font-size="17" fill="#1A342E">A prior may stop acting, stop appearing, or lose its content —</text>
+  <text x="460" y="408" text-anchor="middle" font-size="17" font-weight="700" fill="#1A342E">but nothing ever just disappears. Silent forgetting is the one forbidden move.</text>
+</svg>

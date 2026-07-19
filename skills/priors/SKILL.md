@@ -37,6 +37,13 @@ single new finding until every carried prior has been dispositioned.
    `obsolete-proposed` (you believe it no longer applies — a human confirms).
    Include the disposition table in your visible output — it is the proof
    you processed the priors.
+   Special cases the keeper handles for you: items with scopeState
+   `missing` (their file/anchor is gone) need **no** disposition — the
+   keeper tracks the absence and puts them to rest after a few runs;
+   items marked `resurrected: true` are old findings whose code came back —
+   verify them like any carried item and say "(back — its code returned)"
+   in your output. If `relevant` returned `nudges`, surface each to the
+   user verbatim as a "still true?" question.
 5. **Do the skill's actual work** on changed/new material.
 6. **Propose every new finding** as a candidate JSON:
    `node <keeper> propose cand.json --ns <skill> --run <run>`

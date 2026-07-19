@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="400" fill="#EDE9DC"/>
+  <text x="36" y="46" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="3" fill="#1A342E" opacity="0.75">02 · THE FIX — A SMALL NOTEBOOK BETWEEN YOUR AGENT AND YOUR WORK</text>
+  <line x1="36" y1="60" x2="884" y2="60" stroke="#1A342E" stroke-width="2"/>
+
+  <!-- agent -->
+  <rect x="70" y="140" width="200" height="120" fill="#1F3E45"/>
+  <text x="170" y="195" text-anchor="middle" font-size="17" font-weight="700" fill="#EDE9DC">YOUR AGENT</text>
+  <text x="170" y="220" text-anchor="middle" font-size="14" fill="#EDE9DC" opacity="0.75">any harness, any model</text>
+
+  <!-- ledger notebook -->
+  <rect x="368" y="120" width="184" height="160" fill="#FBF8EE" stroke="#1A342E" stroke-width="2.5"/>
+  <rect x="368" y="120" width="184" height="34" fill="#EFB61B"/>
+  <text x="460" y="143" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="2" fill="#1A342E">THE LEDGER</text>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="13.5" fill="#1A342E">
+    <text x="384" y="180">✓ things fixed</text>
+    <text x="384" y="204">→ things carried</text>
+    <text x="384" y="228">? your decisions</text>
+    <text x="384" y="252">★ lessons learned</text>
+  </g>
+
+  <!-- work -->
+  <rect x="650" y="140" width="200" height="120" fill="none" stroke="#1A342E" stroke-width="2.5"/>
+  <text x="750" y="195" text-anchor="middle" font-size="17" font-weight="700" fill="#1A342E">YOUR WORK</text>
+  <text x="750" y="220" text-anchor="middle" font-size="14" fill="#1A342E" opacity="0.7">code · site · contracts · tools</text>
+
+  <g stroke="#1A342E" stroke-width="2.5" fill="none">
+    <path d="M272 185 L364 185"/><path d="M356 179 L366 185 L356 191" fill="#1A342E" stroke="none"/>
+    <path d="M364 225 L272 225"/><path d="M280 219 L270 225 L280 231" fill="#1A342E" stroke="none"/>
+    <path d="M554 185 L646 185"/><path d="M638 179 L648 185 L638 191" fill="#1A342E" stroke="none"/>
+    <path d="M646 225 L554 225"/><path d="M562 219 L552 225 L562 231" fill="#1A342E" stroke="none"/>
+  </g>
+  <text x="318" y="172" text-anchor="middle" font-size="12.5" fill="#1A342E" opacity="0.7">checks first</text>
+  <text x="318" y="248" text-anchor="middle" font-size="12.5" fill="#1A342E" opacity="0.7">writes after</text>
+
+  <text x="460" y="330" text-anchor="middle" font-size="17" fill="#1A342E">It’s a plain text folder — <tspan font-family="ui-monospace, Menlo, monospace" font-weight="700">.priors/</tspan> — that lives in your repo and travels with it.</text>
+  <text x="460" y="358" text-anchor="middle" font-size="17" font-weight="700" fill="#1A342E">The agent must check it before speaking, and a small script makes sure it did.</text>
+</svg>

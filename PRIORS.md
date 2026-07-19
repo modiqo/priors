@@ -1,6 +1,6 @@
 # PRIORS — a standard for skills that remember what was settled
 
-*Version 0.1 · status: draft · this document is the standard; the bundled
+*Version 0.2 · status: draft · this document is the standard; the bundled
 keeper (`skills/priors/scripts/priors.mjs`) is its reference implementation.
 Conforming implementations may be written in any language and must pass the
 conformance fixtures in `tests/`.*
@@ -159,7 +159,42 @@ system-prompt.md` (anything else). A shell-less harness degrades to
 advisory mode and is **non-conforming** — priors as pasted context, no
 veto, and must be labeled as such.
 
-## 9 · Presentation rule
+## 9 · Forgetting — always a status, never an absence
+
+Forgetting is three different operations; conflating them is how memory
+systems rot. (Grounding: Anderson & Schooler 1991 — memory availability
+rationally tracks *probability of need*; forgetting is an attention policy,
+not data loss.)
+
+1. **Semantic** — "no longer holds": `fixed`, `obsolete`, supersession.
+   Covered by the lifecycle; history always retained.
+2. **Attention** — "stop showing me this": an advisory `verify-phase` prior
+   whose scope has been missing for **K = 5 consecutive runs** is
+   **archived** — excluded from exposure, fully retained, and
+   **auto-resurrected with its history** the moment its scope_ref reappears
+   (a file restored from an old branch gets its findings back, not a fresh
+   review). Deterministic, keeper-computed from `scope-missing` events,
+   and loud (the commit summary reports resting priors). Binding priors
+   never auto-archive — decisions don't expire from neglect. Repo-wide
+   binding priors (calibrations, playbooks) have no hash tripwire, so they
+   may carry `review_every: N`: after N runs without a human touch, the
+   keeper surfaces a nudge ("still true? `decide <id> keep` — or retire").
+   A nudge, never an auto-forget.
+3. **Record** — true deletion: refused, except for content that should
+   never have been recorded (secrets, PII). The human-only `redact` verb
+   performs the **one sanctioned in-place rewrite**: the record's content
+   is replaced by a tombstone (id, content hash, born-run) and a redact
+   event is appended — the removal is itself remembered, and id sequence
+   stays intact. Caveat stated honestly: the ledger lives in git; `redact`
+   cleans the working truth, and scrubbing git history is a documented
+   separate step.
+
+The unifying rule, sibling to the ratchet: a prior may stop *acting*, stop
+*appearing*, or have its content *removed* — but the record that it existed,
+and why it changed, survives in every case. Silent disappearance is the one
+forbidden operation.
+
+## 10 · Presentation rule
 
 Implementations MUST keep the user-facing surface in plain language. The
 terms of art in this spec (disposition, facets, quiescence) are for

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 420" font-family="system-ui, -apple-system, sans-serif">
+  <rect width="920" height="420" fill="#EDE9DC"/>
+  <text x="36" y="46" font-family="ui-monospace, Menlo, monospace" font-size="13" letter-spacing="3" fill="#1A342E" opacity="0.75">04 · YOUR CALL — DECIDE ONCE, AND IT STAYS DECIDED</text>
+  <line x1="36" y1="60" x2="884" y2="60" stroke="#1A342E" stroke-width="2"/>
+
+  <!-- timeline -->
+  <line x1="90" y1="330" x2="850" y2="330" stroke="#1A342E" stroke-width="2.5"/>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="13" fill="#1A342E">
+    <text x="150" y="356" text-anchor="middle">run 2</text>
+    <text x="360" y="356" text-anchor="middle">run 3</text>
+    <text x="510" y="356" text-anchor="middle">run 4</text>
+    <text x="660" y="356" text-anchor="middle">run 5 …</text>
+    <text x="810" y="356" text-anchor="middle">the code changes</text>
+  </g>
+
+  <!-- run 2: the question + decision -->
+  <rect x="80" y="110" width="230" height="96" fill="#EFB61B"/>
+  <text x="195" y="140" text-anchor="middle" font-size="15.5" font-weight="700" fill="#1A342E">?  “unwrap() in this test”</text>
+  <text x="195" y="163" text-anchor="middle" font-size="14.5" fill="#1A342E">You: “skip it — that’s fine here.”</text>
+  <text x="195" y="190" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="700" fill="#1A342E">DECIDED ▸</text>
+  <line x1="195" y1="206" x2="195" y2="326" stroke="#1A342E" stroke-width="2"/>
+
+  <!-- padlock -->
+  <g transform="translate(178,232)">
+    <rect x="0" y="14" width="34" height="26" fill="#1A342E"/>
+    <path d="M6 14 V8 a11 11 0 0 1 22 0 V14" fill="none" stroke="#1A342E" stroke-width="5"/>
+  </g>
+
+  <!-- silent runs -->
+  <g font-size="15" fill="#1A342E" opacity="0.55">
+    <text x="360" y="250" text-anchor="middle" font-style="italic">not asked</text>
+    <text x="510" y="250" text-anchor="middle" font-style="italic">not asked</text>
+    <text x="660" y="250" text-anchor="middle" font-style="italic">not asked</text>
+  </g>
+
+  <!-- the one key -->
+  <g>
+    <line x1="810" y1="206" x2="810" y2="326" stroke="#DC5A17" stroke-width="2.5"/>
+    <rect x="720" y="110" width="180" height="96" fill="none" stroke="#DC5A17" stroke-width="2.5"/>
+    <text x="810" y="142" text-anchor="middle" font-size="15" font-weight="700" fill="#DC5A17">that test is rewritten</text>
+    <text x="810" y="166" text-anchor="middle" font-size="14.5" fill="#1A342E">only now may the</text>
+    <text x="810" y="186" text-anchor="middle" font-size="14.5" fill="#1A342E">question come back</text>
+  </g>
+
+  <text x="460" y="398" text-anchor="middle" font-size="17" fill="#1A342E">The agent can never re-argue a decision. <tspan font-weight="700">The only key is a real change in the thing you decided about.</tspan></text>
+</svg>
