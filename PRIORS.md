@@ -76,7 +76,10 @@ self-describing without this table:
 
 \* calibration records still *arrive* advisory and are promoted by `decide`.
 New types (e.g. `preference`, `playbook`) are minted by naming a bundle —
-five lines of registry, zero code.
+five lines of registry, zero code. The full argument for
+composition-over-declaration, with worked use cases (code review,
+ratified landing-page decisions from a live ledger, design preferences,
+legal playbooks, tool lessons): [docs/type-composition.md](docs/type-composition.md).
 
 ## 4 · Lifecycle
 
