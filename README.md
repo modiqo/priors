@@ -110,12 +110,17 @@ One folder per client; client A never sees client B.
 
 ## Install
 
-**Claude Code** — native plugin install, nothing to clone:
+**Claude Code** — native plugin install straight from this repo, nothing
+to clone. From your terminal:
 
+```bash
+claude plugin marketplace add conikeec/priors
+claude plugin install priors@priors-marketplace
 ```
-/plugin marketplace add conikeec/priors
-/plugin install priors@priors-marketplace
-```
+
+(or, inside a Claude Code session, the same two as slash commands:
+`/plugin marketplace add conikeec/priors` then
+`/plugin install priors@priors-marketplace`)
 
 **Any other harness** — one clone, one installer:
 
