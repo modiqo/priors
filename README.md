@@ -108,7 +108,16 @@ One folder per client; client A never sees client B.
 
 ---
 
-## Install — any harness, one command
+## Install
+
+**Claude Code** — native plugin install, nothing to clone:
+
+```
+/plugin marketplace add conikeec/priors
+/plugin install priors@priors-marketplace
+```
+
+**Any other harness** — one clone, one installer:
 
 ```bash
 git clone https://github.com/conikeec/priors
@@ -117,8 +126,8 @@ cd priors && ./install.sh
 
 | Harness | What install means |
 |---|---|
-| **Claude Code** | skill `priors` + `/with-priors` command (auto-installed) |
-| **OpenClaw** | same skill, its native format (auto-installed) |
+| **Claude Code** | the plugin above (or `install.sh` copies the skill + command) |
+| **OpenClaw** | same skill, its native format (auto-installed by `install.sh`) |
 | **Kimi CLI** / other Agent-Skills harnesses | point them at `skills/priors/` |
 | **Codex** | paste `adapters/AGENTS-snippet.md` into your repo's `AGENTS.md` |
 | **Hermes / anything with a shell** | `adapters/system-prompt.md` into the system prompt |
