@@ -1,0 +1,13 @@
+{
+  "name": "priors-marketplace",
+  "owner": {
+    "name": "conikeec"
+  },
+  "plugins": [
+    {
+      "name": "priors",
+      "source": "./",
+      "description": "Memory that binds: wrap any skill so re-runs honor what previous runs settled — fixed acknowledged, decisions never re-argued, lessons learned once."
+    }
+  ]
+}
