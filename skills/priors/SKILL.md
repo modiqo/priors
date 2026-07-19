@@ -6,11 +6,10 @@ description: The priors protocol — make any judgment or learning skill remembe
 # priors — the ritual
 
 You are running a skill *with memory*. The keeper script enforces the rules;
-your job is the ritual around it. The keeper ships in two behavior-identical
-runtimes relative to this skill — use whichever the environment permits:
-`node scripts/priors.mjs`, or `python3 scripts/priors.py` where node is
-unavailable or blocked (e.g. guarded agent workspaces that allow python
-only). Same ledger format, same refusals, same exit codes.
+your job is the ritual around it. The keeper is at `scripts/priors.mjs`
+relative to this skill — call it with `node`. (If an environment blocks
+node, surface that to the user rather than working around it; the ledger
+format is runtime-neutral and a conforming keeper can be ported.)
 
 **The one law: nothing new before the old is honored.** You may not report a
 single new finding until every carried prior has been dispositioned.
