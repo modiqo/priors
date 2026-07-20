@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Authority and lifecycle in the append-only Priors ledger</title>
+  <desc id="desc">Agent proposals are born advisory. Agents can record observable dispositions, but only an explicit human decision can create binding accepted or wontfix state or reopen it. Scope changes trigger re-judgment without erasing history.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
+    </marker>
+    <marker id="orange-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#D95D24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">AUTHORITY + LIFECYCLE</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">The agent can observe. Only a human can make judgment stick.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <rect x="52" y="145" width="258" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+    <text x="181" y="177" text-anchor="middle" font-size="12.5" letter-spacing="2" fill="#47645C">AGENT PROPOSES</text>
+    <text x="181" y="209" text-anchor="middle" font-size="19" font-weight="700" fill="#173B34">New prior</text>
+    <rect x="110" y="224" width="142" height="25" rx="12.5" fill="#F7E0D3"/>
+    <text x="181" y="242" text-anchor="middle" font-size="12" font-weight="700" fill="#D95D24">ADVISORY AT BIRTH</text>
+
+    <path d="M320 204 H409" stroke="#173B34" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="420" y="145" width="330" height="118" rx="18" fill="#173B34"/>
+    <text x="585" y="177" text-anchor="middle" font-size="12.5" letter-spacing="2" fill="#BFDCCF">OPEN LEDGER STATE</text>
+    <text x="585" y="209" text-anchor="middle" font-size="19" font-weight="700" fill="#FFFDFC">Applicable on the next run</text>
+    <text x="585" y="237" text-anchor="middle" font-size="13" fill="#BFDCCF">immutable record · later events fold its state</text>
+
+    <path d="M760 204 H849" stroke="#D95D24" stroke-width="3" marker-end="url(#orange-arrow)"/>
+    <text x="805" y="185" text-anchor="middle" font-size="11.5" font-weight="700" fill="#D95D24">HUMAN DECIDES</text>
+
+    <rect x="860" y="132" width="288" height="144" rx="18" fill="#F7E0D3" stroke="#D95D24" stroke-width="2"/>
+    <text x="1004" y="165" text-anchor="middle" font-size="12.5" letter-spacing="2" fill="#D95D24">BINDING SET</text>
+    <g font-size="15" font-weight="700" fill="#173B34">
+      <rect x="895" y="187" width="102" height="42" rx="21" fill="#FFFDFC"/><text x="946" y="213" text-anchor="middle">accepted</text>
+      <rect x="1011" y="187" width="102" height="42" rx="21" fill="#FFFDFC"/><text x="1062" y="213" text-anchor="middle">wontfix</text>
+    </g>
+    <text x="1004" y="255" text-anchor="middle" font-size="12.5" fill="#47645C">agent paths cannot assign these states</text>
+
+    <text x="52" y="328" font-size="12.5" letter-spacing="2" fill="#47645C">OBSERVABLE AGENT DISPOSITIONS</text>
+    <g font-size="14" font-weight="700" fill="#173B34">
+      <rect x="52" y="348" width="152" height="50" rx="14" fill="#E1ECE7"/><text x="128" y="379" text-anchor="middle">still-open</text>
+      <rect x="216" y="348" width="132" height="50" rx="14" fill="#E1ECE7"/><text x="282" y="379" text-anchor="middle">fixed</text>
+      <rect x="360" y="348" width="154" height="50" rx="14" fill="#E1ECE7"/><text x="437" y="379" text-anchor="middle">reaffirmed</text>
+      <rect x="526" y="348" width="132" height="50" rx="14" fill="#E1ECE7"/><text x="592" y="379" text-anchor="middle">stale</text>
+      <rect x="670" y="348" width="152" height="50" rx="14" fill="#E1ECE7"/><text x="746" y="379" text-anchor="middle">challenged</text>
+      <rect x="834" y="348" width="206" height="50" rx="14" fill="#E1ECE7"/><text x="937" y="379" text-anchor="middle">obsolete-proposed</text>
+    </g>
+    <text x="1060" y="379" font-size="13" fill="#47645C">events, not edits</text>
+
+    <path d="M585 269 V333" stroke="#173B34" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <path d="M1004 284 C1004 439 760 440 760 281" fill="none" stroke="#D95D24" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#orange-arrow)"/>
+    <text x="937" y="440" text-anchor="middle" font-size="12" font-weight="700" fill="#D95D24">human reopen requires a reason</text>
+
+    <rect x="52" y="486" width="1096" height="82" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+    <circle cx="98" cy="527" r="20" fill="#E9C46A"/>
+    <path d="M88 527 H108 M98 517 V537" stroke="#173B34" stroke-width="3" stroke-linecap="round"/>
+    <text x="135" y="519" font-size="16" font-weight="700" fill="#173B34">Scope changed?</text>
+    <text x="135" y="544" font-size="13.5" fill="#47645C">The claim becomes eligible for re-judgment under the keeper’s lifecycle rules. The original event history remains intact.</text>
+  </g>
+</svg>

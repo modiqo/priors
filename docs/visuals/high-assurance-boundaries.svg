@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Memory and authority across high-assurance domains</title>
+  <desc id="desc">Clinical operations, aerospace, privacy, incident response, and data migration each use Priors for findings, review depth, doctrine, and procedures while retaining domain-specific external authority.</desc>
+  <rect width="1200" height="660" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">OTHER HIGH-ASSURANCE DOMAINS</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">The memory pattern transfers. Authority does not.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="62" y="139" font-size="12.5" letter-spacing="2" fill="#47645C">DOMAIN</text>
+    <text x="300" y="139" font-size="12.5" letter-spacing="2" fill="#47645C">PRIORS REMEMBERS</text>
+    <text x="782" y="139" font-size="12.5" letter-spacing="2" fill="#47645C">AUTHORITY REMAINS WITH</text>
+
+    <g transform="translate(52 158)">
+      <rect width="1096" height="82" rx="16" fill="#FFFDFC" stroke="#B9C8C2"/>
+      <rect width="220" height="82" rx="16" fill="#173B34"/>
+      <text x="26" y="36" font-size="17" font-weight="700" fill="#FFFDFC">Clinical operations</text>
+      <text x="26" y="60" font-size="12.5" fill="#BFDCCF">care and protocol review</text>
+      <text x="250" y="35" font-size="14" font-weight="700" fill="#173B34">protocol deviations · review depth · safety doctrine</text>
+      <text x="250" y="59" font-size="12.5" fill="#47645C">plus validated tool procedures</text>
+      <rect x="718" y="15" width="352" height="52" rx="13" fill="#F7E0D3"/>
+      <text x="894" y="36" text-anchor="middle" font-size="13.5" font-weight="700" fill="#173B34">clinician judgment · validated systems</text>
+      <text x="894" y="55" text-anchor="middle" font-size="12" fill="#47645C">protocol and regulatory controls</text>
+    </g>
+
+    <g transform="translate(52 252)">
+      <rect width="1096" height="82" rx="16" fill="#FFFDFC" stroke="#B9C8C2"/>
+      <rect width="220" height="82" rx="16" fill="#2F7967"/>
+      <text x="26" y="36" font-size="17" font-weight="700" fill="#FFFDFC">Aerospace + industrial</text>
+      <text x="26" y="60" font-size="12.5" fill="#D6EEE6">assurance and operations</text>
+      <text x="250" y="35" font-size="14" font-weight="700" fill="#173B34">hazard findings · sign-off review floor · constraints</text>
+      <text x="250" y="59" font-size="12.5" fill="#47645C">plus toolchain lessons</text>
+      <rect x="718" y="15" width="352" height="52" rx="13" fill="#F7E0D3"/>
+      <text x="894" y="36" text-anchor="middle" font-size="13.5" font-weight="700" fill="#173B34">certified evidence · safety case · interlocks</text>
+      <text x="894" y="55" text-anchor="middle" font-size="12" fill="#47645C">accountable release sign-off</text>
+    </g>
+
+    <g transform="translate(52 346)">
+      <rect width="1096" height="82" rx="16" fill="#FFFDFC" stroke="#B9C8C2"/>
+      <rect width="220" height="82" rx="16" fill="#D95D24"/>
+      <text x="26" y="36" font-size="17" font-weight="700" fill="#FFFDFC">Privacy + compliance</text>
+      <text x="26" y="60" font-size="12.5" fill="#FFF0E8">control assessment</text>
+      <text x="250" y="35" font-size="14" font-weight="700" fill="#173B34">control gaps · assessment depth · handling policy</text>
+      <text x="250" y="59" font-size="12.5" fill="#47645C">plus scanner procedures</text>
+      <rect x="718" y="15" width="352" height="52" rx="13" fill="#F7E0D3"/>
+      <text x="894" y="36" text-anchor="middle" font-size="13.5" font-weight="700" fill="#173B34">law · counsel · control owner · access</text>
+      <text x="894" y="55" text-anchor="middle" font-size="12" fill="#47645C">audited compliance evidence</text>
+    </g>
+
+    <g transform="translate(52 440)">
+      <rect width="1096" height="82" rx="16" fill="#FFFDFC" stroke="#B9C8C2"/>
+      <rect width="220" height="82" rx="16" fill="#A98221"/>
+      <text x="26" y="36" font-size="17" font-weight="700" fill="#FFFDFC">Incident response</text>
+      <text x="26" y="60" font-size="12.5" fill="#FFF5D2">investigation and recovery</text>
+      <text x="250" y="35" font-size="14" font-weight="700" fill="#173B34">root cause · investigation depth · escalation doctrine</text>
+      <text x="250" y="59" font-size="12.5" fill="#47645C">plus environment-specific recovery steps</text>
+      <rect x="718" y="15" width="352" height="52" rx="13" fill="#F7E0D3"/>
+      <text x="894" y="36" text-anchor="middle" font-size="13.5" font-weight="700" fill="#173B34">paging · access · change approval</text>
+      <text x="894" y="55" text-anchor="middle" font-size="12" fill="#47645C">operational command</text>
+    </g>
+
+    <g transform="translate(52 534)">
+      <rect width="1096" height="82" rx="16" fill="#FFFDFC" stroke="#B9C8C2"/>
+      <rect width="220" height="82" rx="16" fill="#4D7890"/>
+      <text x="26" y="36" font-size="17" font-weight="700" fill="#FFFDFC">Data migration</text>
+      <text x="26" y="60" font-size="12.5" fill="#E3EDF3">integrity and cutover</text>
+      <text x="250" y="35" font-size="14" font-weight="700" fill="#173B34">integrity risks · dry-run depth · rollback policy</text>
+      <text x="250" y="59" font-size="12.5" fill="#47645C">plus database and tool recipes</text>
+      <rect x="718" y="15" width="352" height="52" rx="13" fill="#F7E0D3"/>
+      <text x="894" y="36" text-anchor="middle" font-size="13.5" font-weight="700" fill="#173B34">backups · transactions · validation gates</text>
+      <text x="894" y="55" text-anchor="middle" font-size="12" fill="#47645C">accountable cutover authority</text>
+    </g>
+  </g>
+</svg>

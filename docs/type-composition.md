@@ -29,6 +29,8 @@ This is not an unrestricted algebra where every possible cross-product is
 meaningful. It is a **factored type system with coherence constraints**. The
 keeper validates and enforces the facets; people name the recurring bundles.
 
+![Domain types are composed from five behavioral facets](visuals/type-composition.svg)
+
 ## The trap a closed enum creates
 
 Suppose the engine begins with:
@@ -155,6 +157,8 @@ renaming every domain type. In v0.3, however, the three pairs above are the
 implemented behaviors; documentation and custom types should not pretend that
 the full 3 × 3 cross-product exists.
 
+![Activation and obligation across a Priors run](visuals/activation-obligation.svg)
+
 ### `run-start`: shape the work
 
 These priors behave like durable additions to the wrapped skill:
@@ -249,6 +253,8 @@ shipped bundles. The `lifecycle` field declares the record's contract and keeps
 the ledger self-describing; it should not be read as a promise that every
 mathematically possible facet tuple already has independent engine behavior.
 
+![Authority and lifecycle in the append-only Priors ledger](visuals/authority-lifecycle.svg)
+
 ## Coherence rules
 
 The current keeper enforces these rules when a candidate is proposed:
@@ -334,6 +340,8 @@ An environment-scoped behavioral type can use the same proven behavior with
 
 The important thing is that these are **behavior families**, not a claim that
 the world contains only four kinds of memory.
+
+![Four behavioral bundles serve many domain use cases](visuals/bundle-domain-map.svg)
 
 ## One bundle, many use cases
 
@@ -446,6 +454,8 @@ review” is not one behavior:
    scoped to the capture environment and can be challenged if that procedure
    stops working.
 
+![One review produces several kinds of memory](visuals/workflow-composition.svg)
+
 Calling all five `review-memory` would hide their different consequences.
 Hard-coding five domain features would couple the keeper to web design. Facets
 let one run produce a checkable finding, a veto-only baseline, two standing
@@ -497,6 +507,8 @@ differences.
 | `verification-policy` | Calibration | “Release candidates require disposition of unresolved severity-gate findings.” | Inject the human-accepted policy at run start. |
 | `eda-tool-recipe` | Behavioral | “Use the formal tool's multiclock elaboration mode for this block.” | Inject the recipe for the matching tool version; challenge it if it fails. |
 
+![Priors in a hardware verification workflow](visuals/hardware-verification.svg)
+
 The scope extractor matters. A proof result may depend on RTL, properties,
 constraints, black-box models, and tool configuration. Hashing only the RTL
 would give a false impression of freshness. The harness should compute a
@@ -536,6 +548,8 @@ side effects. Its memories also separate cleanly:
 | `operating-rule` | Calibration | “Never submit after validation fails; route the item to exception handling.” | Inject the human-accepted rule at run start. |
 | `bot-environment-recipe` | Behavioral | “Wait for the export job ID, not the browser spinner, before downloading.” | Reuse for the matching browser/API environment and challenge on failure. |
 
+![Priors and runtime controls in an RPA workflow](visuals/rpa-critical-controls.svg)
+
 Scope should include the workflow definition plus dependencies such as selector
 contracts, API schemas, or form versions. `env-fingerprint` should capture the
 browser, driver, OCR model, connector, or runtime versions that make an
@@ -568,6 +582,8 @@ controlled books, transaction systems, and accountable approvers.
 | `accounting-policy` | Calibration | “Classify these pass-through fees as contra-revenue under the approved policy.” | Inject the human-accepted policy into later runs. |
 | `market-data-recipe` | Behavioral | “Request the adjusted series and record the provider revision timestamp.” | Reuse for the matching API/tool version and challenge if it stops working. |
 
+![Priors and financial control boundaries](visuals/finance-critical-controls.svg)
+
 For reproducibility, a financial content identity often needs more than a file
 hash. It may be a canonical digest of the report definition, query text,
 parameters, source snapshot, model version, assumptions, and relevant calendar
@@ -597,6 +613,8 @@ The same four proven bundles cover a useful slice of other critical work:
 | Incident response | Root-cause or exposure finding | Investigation-depth baseline | Escalation doctrine | Environment-specific recovery step | Paging, access control, change approval, and operational command |
 | Data migration | Integrity or rollback finding | Dry-run review baseline | Cutover policy | Database/tool recipe | Backups, transactions, validation gates, and cutover authority |
 
+![Memory and authority across high-assurance domains](visuals/high-assurance-boundaries.svg)
+
 This table is a map to known behavior, not a certification claim. Each domain
 still needs a precise scope extractor, evidence requirements, conformance tests,
 and accountable ownership.
@@ -618,6 +636,8 @@ If `Keeper does` says “authorize,” “prove,” “block a transaction,” �
 approvals,” or another action outside the three implemented behaviors, stop.
 That is a request for a new trusted verb or an external control integration,
 not merely another composition of existing facets.
+
+![Critical-system control contract for a Priors type](visuals/critical-control-contract.svg)
 
 ## Minting a domain type
 

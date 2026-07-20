@@ -12,6 +12,8 @@ a small deterministic keeper validates, records, and—when necessary—refuses.
 
 > **The one law:** nothing new before the old is honored.
 
+![Priors turns repeated agent reviews into a converging process](docs/visuals/priors-convergence.svg)
+
 ## Why this exists
 
 Repeated agent work often gets worse in a very specific way:
@@ -221,6 +223,8 @@ second run is where memory becomes visible.
 5. **Commit atomically.** The run is sealed only when all obligations are
    complete. Retrying a committed run returns the original result rather than
    writing twice.
+
+![The five-stage Priors review cycle](docs/visuals/review-cycle.svg)
 
 The complete protocol and conformance requirements are in
 [PRIORS.md](PRIORS.md).

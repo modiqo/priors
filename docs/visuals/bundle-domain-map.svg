@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Four behavioral bundles serve many domain use cases</title>
+  <desc id="desc">Conclusion, coverage, calibration, and behavioral bundles each map to many domain names while preserving a distinct runtime consequence.</desc>
+  <rect width="1200" height="700" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">FOUR PROVEN BUNDLES · MANY DOMAIN NAMES</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Reuse behavior without flattening domain language.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <g transform="translate(52 130)">
+      <rect width="1096" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <rect width="250" height="118" rx="18" fill="#173B34"/>
+      <text x="28" y="42" font-size="20" font-weight="700" fill="#FFFDFC">Conclusion</text>
+      <text x="28" y="70" font-size="13" fill="#BFDCCF">verify → disposition</text>
+      <text x="28" y="94" font-size="12" fill="#BFDCCF">stale when content changes</text>
+      <text x="282" y="32" font-size="12" letter-spacing="2" fill="#47645C">DOMAIN NAMES</text>
+      <g font-size="14" font-weight="700" fill="#173B34">
+        <rect x="282" y="48" width="142" height="38" rx="19" fill="#F7E0D3"/><text x="353" y="72" text-anchor="middle">code-finding</text>
+        <rect x="438" y="48" width="150" height="38" rx="19" fill="#F7E0D3"/><text x="513" y="72" text-anchor="middle">contract-clause</text>
+        <rect x="602" y="48" width="126" height="38" rx="19" fill="#F7E0D3"/><text x="665" y="72" text-anchor="middle">rtl-finding</text>
+        <rect x="742" y="48" width="168" height="38" rx="19" fill="#F7E0D3"/><text x="826" y="72" text-anchor="middle">workflow-defect</text>
+        <rect x="924" y="48" width="148" height="38" rx="19" fill="#F7E0D3"/><text x="998" y="72" text-anchor="middle">model-risk</text>
+      </g>
+    </g>
+
+    <g transform="translate(52 264)">
+      <rect width="1096" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <rect width="250" height="118" rx="18" fill="#2F7967"/>
+      <text x="28" y="42" font-size="20" font-weight="700" fill="#FFFDFC">Coverage</text>
+      <text x="28" y="70" font-size="13" fill="#D6EEE6">propose gate → review floor</text>
+      <text x="28" y="94" font-size="12" fill="#D6EEE6">blocks lower-depth rediscovery</text>
+      <text x="282" y="32" font-size="12" letter-spacing="2" fill="#47645C">DOMAIN NAMES</text>
+      <g font-size="14" font-weight="700" fill="#173B34">
+        <rect x="282" y="48" width="142" height="38" rx="19" fill="#E1ECE7"/><text x="353" y="72" text-anchor="middle">review-depth</text>
+        <rect x="438" y="48" width="150" height="38" rx="19" fill="#E1ECE7"/><text x="513" y="72" text-anchor="middle">audit-baseline</text>
+        <rect x="602" y="48" width="162" height="38" rx="19" fill="#E1ECE7"/><text x="683" y="72" text-anchor="middle">signoff-review</text>
+        <rect x="778" y="48" width="164" height="38" rx="19" fill="#E1ECE7"/><text x="860" y="72" text-anchor="middle">close-coverage</text>
+        <rect x="956" y="48" width="116" height="38" rx="19" fill="#E1ECE7"/><text x="1014" y="72" text-anchor="middle">dry-run</text>
+      </g>
+    </g>
+
+    <g transform="translate(52 398)">
+      <rect width="1096" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <rect width="250" height="118" rx="18" fill="#D95D24"/>
+      <text x="28" y="42" font-size="20" font-weight="700" fill="#FFFDFC">Calibration</text>
+      <text x="28" y="70" font-size="13" fill="#FFF0E8">run start → instruction</text>
+      <text x="28" y="94" font-size="12" fill="#FFF0E8">human-ratified standing judgment</text>
+      <text x="282" y="32" font-size="12" letter-spacing="2" fill="#47645C">DOMAIN NAMES</text>
+      <g font-size="14" font-weight="700" fill="#173B34">
+        <rect x="282" y="48" width="138" height="38" rx="19" fill="#F7E0D3"/><text x="351" y="72" text-anchor="middle">preference</text>
+        <rect x="434" y="48" width="154" height="38" rx="19" fill="#F7E0D3"/><text x="511" y="72" text-anchor="middle">product-doctrine</text>
+        <rect x="602" y="48" width="154" height="38" rx="19" fill="#F7E0D3"/><text x="679" y="72" text-anchor="middle">operating-rule</text>
+        <rect x="770" y="48" width="150" height="38" rx="19" fill="#F7E0D3"/><text x="845" y="72" text-anchor="middle">risk-policy</text>
+        <rect x="934" y="48" width="138" height="38" rx="19" fill="#F7E0D3"/><text x="1003" y="72" text-anchor="middle">playbook</text>
+      </g>
+    </g>
+
+    <g transform="translate(52 532)">
+      <rect width="1096" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <rect width="250" height="118" rx="18" fill="#A98221"/>
+      <text x="28" y="42" font-size="20" font-weight="700" fill="#FFFDFC">Behavioral</text>
+      <text x="28" y="70" font-size="13" fill="#FFF5D2">run start → procedure</text>
+      <text x="28" y="94" font-size="12" fill="#FFF5D2">challenge when it fails</text>
+      <text x="282" y="32" font-size="12" letter-spacing="2" fill="#47645C">DOMAIN NAMES</text>
+      <g font-size="14" font-weight="700" fill="#173B34">
+        <rect x="282" y="48" width="128" height="38" rx="19" fill="#F3E8BC"/><text x="346" y="72" text-anchor="middle">tool-recipe</text>
+        <rect x="424" y="48" width="166" height="38" rx="19" fill="#F3E8BC"/><text x="507" y="72" text-anchor="middle">EDA-procedure</text>
+        <rect x="604" y="48" width="166" height="38" rx="19" fill="#F3E8BC"/><text x="687" y="72" text-anchor="middle">bot-environment</text>
+        <rect x="784" y="48" width="162" height="38" rx="19" fill="#F3E8BC"/><text x="865" y="72" text-anchor="middle">data-provider</text>
+        <rect x="960" y="48" width="112" height="38" rx="19" fill="#F3E8BC"/><text x="1016" y="72" text-anchor="middle">recovery</text>
+      </g>
+    </g>
+  </g>
+</svg>

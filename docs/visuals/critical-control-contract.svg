@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Critical-system control contract for a Priors type</title>
+  <desc id="desc">A six-part contract identifies the memory, dependency identity, exact keeper verb, evidence, human authority, and external control. If the desired keeper verb is authorization, proof, transaction blocking, or multi-party approval, a new engine behavior or external integration is required.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="560" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">CRITICAL-SYSTEM DESIGN TEST</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Write the control contract before naming the type.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <g transform="translate(52 146)">
+      <rect width="168" height="106" rx="17" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <circle cx="28" cy="29" r="15" fill="#173B34"/><text x="28" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">1</text>
+      <text x="52" y="34" font-size="15" font-weight="700" fill="#173B34">Memory</text>
+      <text x="20" y="67" font-size="12.5" fill="#47645C">Exact observation,</text>
+      <text x="20" y="87" font-size="12.5" fill="#47645C">policy, baseline, recipe</text>
+    </g>
+    <path d="M226 199 H248" stroke="#173B34" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(258 146)">
+      <rect width="168" height="106" rx="17" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <circle cx="28" cy="29" r="15" fill="#2F7967"/><text x="28" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">2</text>
+      <text x="52" y="34" font-size="15" font-weight="700" fill="#173B34">Depends on</text>
+      <text x="20" y="67" font-size="12.5" fill="#47645C">Canonical content, tool,</text>
+      <text x="20" y="87" font-size="12.5" fill="#47645C">or environment identity</text>
+    </g>
+    <path d="M432 199 H454" stroke="#173B34" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(464 132)">
+      <rect width="226" height="134" rx="19" fill="#173B34"/>
+      <circle cx="30" cy="31" r="15" fill="#D95D24"/><text x="30" y="36" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">3</text>
+      <text x="56" y="36" font-size="16" font-weight="700" fill="#FFFDFC">Keeper does</text>
+      <text x="24" y="75" font-size="13" font-weight="700" fill="#BFDCCF">inject instruction</text>
+      <text x="24" y="98" font-size="13" font-weight="700" fill="#BFDCCF">require disposition</text>
+      <text x="24" y="121" font-size="13" font-weight="700" fill="#BFDCCF">apply review-depth veto</text>
+    </g>
+    <path d="M696 199 H718" stroke="#173B34" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(728 146)">
+      <rect width="168" height="106" rx="17" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <circle cx="28" cy="29" r="15" fill="#E9C46A"/><text x="28" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#173B34">4</text>
+      <text x="52" y="34" font-size="15" font-weight="700" fill="#173B34">Evidence</text>
+      <text x="20" y="67" font-size="12.5" fill="#47645C">Observable proof that</text>
+      <text x="20" y="87" font-size="12.5" fill="#47645C">the obligation was met</text>
+    </g>
+    <path d="M902 199 H924" stroke="#173B34" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(934 146)">
+      <rect width="214" height="106" rx="17" fill="#FFFDFC" stroke="#D95D24" stroke-width="2"/>
+      <circle cx="28" cy="29" r="15" fill="#D95D24"/><text x="28" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">5</text>
+      <text x="52" y="34" font-size="15" font-weight="700" fill="#173B34">Authority</text>
+      <text x="20" y="67" font-size="12.5" fill="#47645C">Who accepts, supersedes,</text>
+      <text x="20" y="87" font-size="12.5" fill="#47645C">approves, or executes?</text>
+    </g>
+
+    <path d="M1041 262 V310 H600 V332" fill="none" stroke="#D95D24" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <rect x="236" y="344" width="728" height="78" rx="18" fill="#F7E0D3"/>
+    <text x="272" y="376" font-size="13" letter-spacing="2" fill="#D95D24">6 · EXTERNAL CONTROL</text>
+    <text x="272" y="402" font-size="15" font-weight="700" fill="#173B34">Proof engine · IAM gate · system of record · interlock · accountable sign-off</text>
+
+    <rect x="52" y="466" width="1096" height="52" rx="16" fill="#173B34"/>
+    <text x="600" y="488" text-anchor="middle" font-size="13" font-weight="700" fill="#E9C46A">DOES THE DESIRED VERB SAY AUTHORIZE, PROVE, TRANSACT, OR OBTAIN TWO APPROVALS?</text>
+    <text x="600" y="508" text-anchor="middle" font-size="13" fill="#FFFDFC">That requires a new trusted engine behavior or an external control integration—not a new type name.</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Priors and runtime controls in robotic process automation</title>
+  <desc id="desc">Priors preserves workflow defects, review coverage, operating rules, and environment recipes in the agent review layer. Runtime controls such as identity, approval, idempotency, limits, and kill switches remain mandatory before actions execute.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">ROBOTIC PROCESS AUTOMATION</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Memory guides the reviewer. Controls govern the action.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <rect x="52" y="132" width="1096" height="168" rx="22" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+    <text x="82" y="166" font-size="13" letter-spacing="2" fill="#47645C">PRIORS MEMORY LAYER</text>
+    <g font-size="14" font-weight="700" fill="#173B34">
+      <rect x="82" y="190" width="238" height="72" rx="15" fill="#F7E0D3"/><text x="201" y="218" text-anchor="middle">workflow-defect</text><text x="201" y="242" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">re-check duplicate submission risk</text>
+      <rect x="334" y="190" width="238" height="72" rx="15" fill="#E1ECE7"/><text x="453" y="218" text-anchor="middle">automation-review-coverage</text><text x="453" y="242" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">preserve the review-depth floor</text>
+      <rect x="586" y="190" width="238" height="72" rx="15" fill="#F3E8BC"/><text x="705" y="218" text-anchor="middle">operating-rule</text><text x="705" y="242" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">inject human-accepted doctrine</text>
+      <rect x="838" y="190" width="280" height="72" rx="15" fill="#E3EDF3"/><text x="978" y="218" text-anchor="middle">bot-environment-recipe</text><text x="978" y="242" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">reuse for matching browser or API</text>
+    </g>
+
+    <path d="M600 300 V340" stroke="#173B34" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="210" y="348" width="780" height="116" rx="22" fill="#173B34"/>
+    <text x="600" y="378" text-anchor="middle" font-size="13" letter-spacing="2" fill="#BFDCCF">AGENT REVIEW RUN</text>
+    <g font-size="14" font-weight="700" fill="#FFFDFC">
+      <circle cx="292" cy="417" r="24" fill="#2F7967"/><text x="292" y="422" text-anchor="middle">1</text><text x="292" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">inject</text>
+      <path d="M326 417 H417" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <circle cx="451" cy="417" r="24" fill="#D95D24"/><text x="451" y="422" text-anchor="middle">2</text><text x="451" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">re-check</text>
+      <path d="M485 417 H576" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <circle cx="610" cy="417" r="24" fill="#E9C46A"/><text x="610" y="422" text-anchor="middle" fill="#173B34">3</text><text x="610" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">validate</text>
+      <path d="M644 417 H735" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <circle cx="769" cy="417" r="24" fill="#2F7967"/><text x="769" y="422" text-anchor="middle">4</text><text x="769" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">commit</text>
+      <text x="900" y="423" text-anchor="middle" font-size="13" fill="#BFDCCF">observable review</text>
+    </g>
+
+    <line x1="52" y1="510" x2="1148" y2="510" stroke="#D95D24" stroke-width="3" stroke-dasharray="9 7"/>
+    <rect x="322" y="490" width="556" height="40" rx="20" fill="#D95D24"/>
+    <text x="600" y="516" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">PRE-ACTION CONTROL BOUNDARY · INSTRUCTION ≠ AUTHORIZATION</text>
+
+    <text x="52" y="570" font-size="13" letter-spacing="2" fill="#47645C">RPA ORCHESTRATOR AND EXECUTION CONTROLS</text>
+    <g font-size="14" font-weight="700" fill="#173B34">
+      <rect x="52" y="590" width="172" height="76" rx="15" fill="#FFFDFC" stroke="#B9C8C2"/><text x="138" y="621" text-anchor="middle">identity + IAM</text><text x="138" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">least privilege</text>
+      <rect x="236" y="590" width="190" height="76" rx="15" fill="#FFFDFC" stroke="#B9C8C2"/><text x="331" y="621" text-anchor="middle">two-person approval</text><text x="331" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">authenticated token</text>
+      <rect x="438" y="590" width="166" height="76" rx="15" fill="#FFFDFC" stroke="#B9C8C2"/><text x="521" y="621" text-anchor="middle">idempotency</text><text x="521" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">safe replay</text>
+      <rect x="616" y="590" width="166" height="76" rx="15" fill="#FFFDFC" stroke="#B9C8C2"/><text x="699" y="621" text-anchor="middle">limits</text><text x="699" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">amount + rate</text>
+      <rect x="794" y="590" width="166" height="76" rx="15" fill="#FFFDFC" stroke="#B9C8C2"/><text x="877" y="621" text-anchor="middle">kill switch</text><text x="877" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#47645C">stop execution</text>
+      <rect x="972" y="590" width="176" height="76" rx="15" fill="#173B34"/><text x="1060" y="621" text-anchor="middle" fill="#FFFDFC">durable action log</text><text x="1060" y="644" text-anchor="middle" font-size="12.5" font-weight="400" fill="#BFDCCF">system evidence</text>
+    </g>
+  </g>
+</svg>

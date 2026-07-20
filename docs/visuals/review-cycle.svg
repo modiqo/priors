@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">The five-stage Priors review cycle</title>
+  <desc id="desc">A code review snapshots the target, loads applicable priors, checks old findings, validates new proposals, and commits only when all obligations are complete.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">THE CONFORMING RUN</text>
+  <text x="52" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#173B34">Five observable steps. One fail-closed finish.</text>
+
+  <path d="M154 242 H1046" stroke="#8DA49C" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <g transform="translate(130 0)">
+      <circle cx="0" cy="242" r="42" fill="#173B34"/>
+      <text x="0" y="250" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFDFC">1</text>
+      <rect x="-82" y="128" width="164" height="66" rx="14" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <text x="0" y="154" text-anchor="middle" font-size="16" font-weight="700" fill="#173B34">Snapshot</text>
+      <text x="0" y="177" text-anchor="middle" font-size="13" fill="#47645C">hash every scope</text>
+      <text x="0" y="316" text-anchor="middle" font-size="13" fill="#47645C">Trusted world-state</text>
+    </g>
+
+    <g transform="translate(365 0)">
+      <circle cx="0" cy="242" r="42" fill="#2F7967"/>
+      <text x="0" y="250" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFDFC">2</text>
+      <rect x="-82" y="128" width="164" height="66" rx="14" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <text x="0" y="154" text-anchor="middle" font-size="16" font-weight="700" fill="#173B34">Load priors</text>
+      <text x="0" y="177" text-anchor="middle" font-size="13" fill="#47645C">inject · verify · floors</text>
+      <text x="0" y="316" text-anchor="middle" font-size="13" fill="#47645C">Keeper selects</text>
+    </g>
+
+    <g transform="translate(600 0)">
+      <circle cx="0" cy="242" r="42" fill="#D95D24"/>
+      <text x="0" y="250" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFDFC">3</text>
+      <rect x="-82" y="128" width="164" height="66" rx="14" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <text x="0" y="154" text-anchor="middle" font-size="16" font-weight="700" fill="#173B34">Honor old work</text>
+      <text x="0" y="177" text-anchor="middle" font-size="13" fill="#47645C">fixed · carried · stale</text>
+      <text x="0" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#D95D24">Nothing new yet</text>
+    </g>
+
+    <g transform="translate(835 0)">
+      <circle cx="0" cy="242" r="42" fill="#E9C46A"/>
+      <text x="0" y="250" text-anchor="middle" font-size="24" font-weight="700" fill="#173B34">4</text>
+      <rect x="-82" y="128" width="164" height="66" rx="14" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <text x="0" y="154" text-anchor="middle" font-size="16" font-weight="700" fill="#173B34">Validate new</text>
+      <text x="0" y="177" text-anchor="middle" font-size="13" fill="#47645C">dedupe · veto · escalate</text>
+      <text x="0" y="316" text-anchor="middle" font-size="13" fill="#47645C">One issue per proposal</text>
+    </g>
+
+    <g transform="translate(1070 0)">
+      <circle cx="0" cy="242" r="42" fill="#173B34"/>
+      <text x="0" y="250" text-anchor="middle" font-size="24" font-weight="700" fill="#FFFDFC">5</text>
+      <rect x="-82" y="128" width="164" height="66" rx="14" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+      <text x="0" y="154" text-anchor="middle" font-size="16" font-weight="700" fill="#173B34">Commit</text>
+      <text x="0" y="177" text-anchor="middle" font-size="13" fill="#47645C">atomic · sealed</text>
+      <text x="0" y="316" text-anchor="middle" font-size="13" fill="#47645C">Only when complete</text>
+    </g>
+  </g>
+
+  <path d="M1070 341 C1070 438 600 467 600 364" fill="none" stroke="#D95D24" stroke-width="2.5" stroke-dasharray="8 7" marker-end="url(#arrow)"/>
+  <rect x="365" y="390" width="470" height="72" rx="16" fill="#F7E0D3"/>
+  <text x="600" y="418" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#173B34">Any unchecked prior sends the run back.</text>
+  <text x="600" y="442" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#47645C">An incomplete review is not written to the ledger.</text>
+</svg>

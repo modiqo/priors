@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Priors in a hardware verification workflow</title>
+  <desc id="desc">RTL, properties, constraints, models, and tool configuration form a canonical scope identity. Priors carries findings, review coverage, policy, and tool recipes, while formal proof, simulation, coverage closure, CI, and human sign-off remain authoritative.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="#F4F0E5"/>
+  <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">HARDWARE VERIFICATION</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Preserve verification memory without pretending it is proof.</text>
+
+  <g font-family="system-ui, -apple-system, sans-serif">
+    <text x="52" y="143" font-size="12.5" letter-spacing="2" fill="#47645C">TRUSTED INPUT IDENTITY</text>
+    <g font-size="14" font-weight="700" fill="#173B34">
+      <rect x="52" y="160" width="142" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="123" y="187" text-anchor="middle">RTL</text>
+      <rect x="206" y="160" width="142" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="277" y="187" text-anchor="middle">properties</text>
+      <rect x="360" y="160" width="142" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="431" y="187" text-anchor="middle">constraints</text>
+      <rect x="514" y="160" width="142" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="585" y="187" text-anchor="middle">models</text>
+      <rect x="668" y="160" width="180" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="758" y="187" text-anchor="middle">tool configuration</text>
+    </g>
+    <path d="M858 182 H920" stroke="#173B34" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="930" y="151" width="218" height="62" rx="16" fill="#173B34"/>
+    <text x="1039" y="176" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFDFC">CANONICAL DIGEST</text>
+    <text x="1039" y="197" text-anchor="middle" font-size="12.5" fill="#BFDCCF">every invalidating dependency</text>
+
+    <rect x="52" y="249" width="1096" height="250" rx="22" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
+    <text x="82" y="285" font-size="13" letter-spacing="2" fill="#47645C">PRIORS · REVIEW CONTINUITY</text>
+
+    <g>
+      <rect x="82" y="311" width="238" height="145" rx="16" fill="#F7E0D3"/>
+      <circle cx="112" cy="342" r="14" fill="#D95D24"/><text x="112" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">1</text>
+      <text x="138" y="347" font-size="16" font-weight="700" fill="#173B34">Findings</text>
+      <text x="105" y="381" font-size="13" fill="#47645C">RTL defects and formal</text>
+      <text x="105" y="402" font-size="13" fill="#47645C">counterexamples must be</text>
+      <text x="105" y="423" font-size="13" fill="#47645C">re-checked after change.</text>
+
+      <rect x="334" y="311" width="238" height="145" rx="16" fill="#E1ECE7"/>
+      <circle cx="364" cy="342" r="14" fill="#2F7967"/><text x="364" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">2</text>
+      <text x="390" y="347" font-size="16" font-weight="700" fill="#173B34">Review coverage</text>
+      <text x="357" y="381" font-size="13" fill="#47645C">An unchanged scope cannot</text>
+      <text x="357" y="402" font-size="13" fill="#47645C">be re-reviewed below its</text>
+      <text x="357" y="423" font-size="13" fill="#47645C">recorded depth floor.</text>
+
+      <rect x="586" y="311" width="238" height="145" rx="16" fill="#F3E8BC"/>
+      <circle cx="616" cy="342" r="14" fill="#A98221"/><text x="616" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">3</text>
+      <text x="642" y="347" font-size="16" font-weight="700" fill="#173B34">Verification policy</text>
+      <text x="609" y="381" font-size="13" fill="#47645C">Human-accepted release</text>
+      <text x="609" y="402" font-size="13" fill="#47645C">doctrine is injected at</text>
+      <text x="609" y="423" font-size="13" fill="#47645C">the start of the run.</text>
+
+      <rect x="838" y="311" width="280" height="145" rx="16" fill="#E3EDF3"/>
+      <circle cx="868" cy="342" r="14" fill="#4D7890"/><text x="868" y="347" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">4</text>
+      <text x="894" y="347" font-size="16" font-weight="700" fill="#173B34">EDA-tool recipe</text>
+      <text x="861" y="381" font-size="13" fill="#47645C">Reuse elaboration and proof</text>
+      <text x="861" y="402" font-size="13" fill="#47645C">procedure for the matching</text>
+      <text x="861" y="423" font-size="13" fill="#47645C">tool version; challenge failure.</text>
+    </g>
+
+    <line x1="52" y1="540" x2="1148" y2="540" stroke="#D95D24" stroke-width="3" stroke-dasharray="9 7"/>
+    <rect x="403" y="520" width="394" height="40" rx="20" fill="#D95D24"/>
+    <text x="600" y="546" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">AUTHORITY BOUNDARY · MEMORY IS NOT EVIDENCE</text>
+
+    <text x="52" y="601" font-size="12.5" letter-spacing="2" fill="#47645C">AUTHORITATIVE VERIFICATION AND RELEASE CONTROLS</text>
+    <g font-size="14" font-weight="700" fill="#173B34">
+      <rect x="52" y="619" width="170" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="137" y="646" text-anchor="middle">formal engines</text>
+      <rect x="234" y="619" width="150" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="309" y="646" text-anchor="middle">simulation</text>
+      <rect x="396" y="619" width="178" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="485" y="646" text-anchor="middle">coverage closure</text>
+      <rect x="586" y="619" width="166" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="669" y="646" text-anchor="middle">equivalence</text>
+      <rect x="764" y="619" width="120" height="44" rx="12" fill="#FFFDFC" stroke="#B9C8C2"/><text x="824" y="646" text-anchor="middle">CI gate</text>
+      <rect x="896" y="619" width="252" height="44" rx="12" fill="#173B34"/><text x="1022" y="646" text-anchor="middle" fill="#FFFDFC">accountable human sign-off</text>
+    </g>
+  </g>
+</svg>
