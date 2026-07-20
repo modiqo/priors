@@ -41,8 +41,8 @@ JSONL is the truth.
 ## 2 · The five facets (the grammar)
 
 Types are **not** primitive. The keeper implements exactly five facets;
-every type is a named bundle of them. This is what lets unforeseen use
-cases mint new types without changing any implementation.
+every type is a named bundle of them. This lets unforeseen use cases mint
+new domain vocabulary without adding type-specific keeper behavior.
 
 | Facet | Question | Values |
 |---|---|---|
@@ -80,9 +80,12 @@ self-describing without this table:
 | `coverage` | content-hash(set) · propose-gate · veto-only · advisory · stale-on-scope-change | "scope S reviewed at depth D" — blocks below-floor dredging on unchanged scopes |
 | `calibration` | repo-wide · run-start · inject-as-instruction · binding* · only-by-supersession | judgment tuning ("test-file `unwrap()` is accepted style"), doctrine, preferences, playbooks |
 
-\* calibration records still *arrive* advisory and are promoted by `decide`.
-New types (e.g. `preference`, `playbook`) are minted by naming a bundle —
-five lines of registry, zero code. The full argument for
+\* calibration records still *arrive* advisory and gain effective binding
+state through an appended human `decide` event; the original record remains
+immutable. New types (for example `preference` and `playbook`) may be submitted
+with an explicit facet bundle without adding keeper control flow. Adding a
+built-in shorthand currently changes only the declarative preset registry.
+The full argument for
 composition-over-declaration, with worked use cases (code review,
 ratified landing-page decisions from a live ledger, design preferences,
 legal playbooks, tool lessons): [docs/type-composition.md](docs/type-composition.md).
