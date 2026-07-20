@@ -166,14 +166,16 @@ First run works exactly like today, and quietly starts the diary.
 
 The enforcement is a single dependency-free script
 (`skills/priors/scripts/priors.mjs`): the agent *proposes*, the script
-*disposes* — it refuses to record any run that ignored the diary, with
-exit codes, not good intentions. The full technical standard (record
+*disposes* — it records a trusted scope snapshot, refuses proposals until old
+items are handled, validates candidate hashes against that snapshot, and
+atomically seals each run. Retries return the original result instead of
+writing twice. The full technical standard (record
 format, lifecycle, guarantees, conformance) is in [PRIORS.md](PRIORS.md)
 — for skill authors and implementers; you never need it to use this.
 
 ## Status
 
-v0.2 — spec + reference keeper + wrapper + visual tutorial. Reference
+v0.3 — hardened reference keeper + spec + wrapper + visual tutorial. Reference
 adopters: code review and
 [clarity-journey](https://github.com/modiqo/clarity-journey) (site
 audits). Iterating in the open; the spec is the product.

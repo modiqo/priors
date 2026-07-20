@@ -1,6 +1,6 @@
 # PRIORS — a standard for skills that remember what was settled
 
-*Version 0.2 · status: draft · this document is the standard; the bundled
+*Version 0.3 · status: draft · this document is the standard; the bundled
 keeper (`skills/priors/scripts/priors.mjs`) is its reference implementation.
 Conforming implementations may be written in any language and must pass the
 conformance fixtures in `tests/`.*
@@ -62,6 +62,12 @@ never how much it binds: records are born `advisory`; only a human `decide`
 event promotes to `binding`. (Poisoning defense: a hallucinated run can
 propose, never legislate.)
 
+The local CLI cannot authenticate process identity: a harness could call a
+human verb dishonestly. Conformance therefore requires `decide` to be exposed
+only after an explicit human instruction; the reference keeper additionally
+allows decisions only between runs. What it enforces mechanically is that no
+candidate or agent disposition can assign binding authority.
+
 ## 3 · Standard types (the vocabulary)
 
 Shipped presets — stored *expanded* in the ledger so the JSONL is
@@ -90,28 +96,35 @@ candidate ────────────────▶ open ──┬─�
                                    ├─▶ fixed        (scope shows the issue gone)
                                    ├─▶ still-open   (unchanged; carried, same id)
                                    ├─▶ stale        (scope hash moved → re-judge, id preserved)
+                                   ├─▶ reaffirmed   (same claim, new trusted hash, id preserved)
                                    ├─▶ challenged   (behavioral prior failed in the field)
                                    └─▶ obsolete-proposed → obsolete (human confirms)
 reopen(human, with reason) reverses any terminal state — the only unlock.
 ```
 
-Stale is **carry-forward, not amnesia**: the re-judgment either re-affirms
-the prior under its new hash (same id, history intact) or retires it with a
-reason. Hash change never silently deletes.
+Stale is **carry-forward, not amnesia**: the re-judgment either records a
+`reaffirmed` event under the keeper's current trusted hash (same id, history
+intact), marks the issue fixed, or proposes retirement with a reason. Hash
+change never silently deletes and the model never supplies the replacement
+hash independently of the run snapshot.
 
 ## 5 · The protocol (what a conforming run does)
 
 1. **`relevant`** — the keeper (not the model) selects applicable priors
-   from the given scope map. Deterministic exposure: the model never gets
-   to "not find" a prior. Output partitions by activation: `inject` items
-   are prepended to the working context; `verify` items become the
-   obligation list; the selection is recorded for step 4's coverage check.
+   from the complete scope map and records that map as the run's trusted
+   snapshot. Deterministic exposure: the model never gets to "not find" a
+   prior. Output partitions by activation: `inject` items are prepended to
+   the working context; `verify` items become the obligation list; the
+   selection and scope hashes are recorded for steps 3–4.
 2. **disposition** — before proposing anything new, the run dispositions
    every `verify` item. The output must contain the table; you cannot
    disposition what you did not process — the table is the proof of
    reading.
-3. **`propose`** — new candidates are submitted per finding. The keeper
-   rejects, with the conflicting prior cited: **duplicates** (same
+3. **`propose`** — new candidates are submitted per finding only after all
+   applicable verify items have been handled. The keeper derives the
+   candidate's scope hash and changed/unchanged state from the recorded run
+   snapshot; unknown scopes and mismatched candidate hashes are refused. It
+   then rejects, with the conflicting prior cited: **duplicates** (same
    ns+scope+direction/claim in *any* status — dedup against the seen-set,
    not the accepted-set), **re-raises** (binding prior, unchanged hash),
    **reversals** (direction opposes an applied/accepted prior on an
@@ -119,10 +132,12 @@ reason. Hash change never silently deletes.
    never silently emitted), and **below-floor** findings (severity under a
    coverage prior's depth on unchanged scope; deeper requires an explicit
    new contract).
-4. **`commit`** — refused unless every `verify` item was dispositioned.
-   A non-compliant run simply does not ledger: **fail-closed**. The floor
-   on ledger integrity is the script, not the diligence of whichever model
-   ran today.
+4. **`commit`** — refused unless every `verify` item was handled. A commit is
+   an atomic, one-shot transaction recorded by a run event; retries return
+   the original summary byte-for-byte and cannot append the run twice.
+   Committed staging material is removed. A non-compliant run simply does not
+   ledger: **fail-closed**. Only one uncommitted run may exist; `abort` is the
+   explicit recovery door for abandoned staging.
 
 ### The influence guarantee, stated honestly
 
@@ -137,9 +152,10 @@ Canonical JSON (sorted keys, LF, no floats where integers serve);
 sequential ids per ledger (`P-%04d`); scope hashes = first 12 hex of
 SHA-256 over *normalized* content (whitespace-collapsed for text; raw
 stdout for tool versions); all timestamps/ids stamped by the keeper, never
-by the model; append-only JSONL; single writer (runs stage under
-`.priors/runs/<run>/`, only `commit` touches the ledger); git is the
-transaction log. Same inputs ⇒ byte-identical ledger.
+by the model; append-only JSONL; a keeper lock and single active run; atomic
+ledger replacement at commit; staging under `.priors/runs/<run>/` removed
+after the run is sealed; git is the durable transaction log. Same inputs ⇒
+byte-identical ledger.
 
 ## 7 · Adoption levels (backporting)
 
@@ -186,11 +202,12 @@ not data loss.)
 3. **Record** — true deletion: refused, except for content that should
    never have been recorded (secrets, PII). The human-only `redact` verb
    performs the **one sanctioned in-place rewrite**: the record's content
-   is replaced by a tombstone (id, content hash, born-run) and a redact
-   event is appended — the removal is itself remembered, and id sequence
-   stays intact. Caveat stated honestly: the ledger lives in git; `redact`
-   cleans the working truth, and scrubbing git history is a documented
-   separate step.
+   is replaced by a tombstone (id, content hash, born-run), current run
+   materializations containing that id are scrubbed, and a redact event is
+   appended. Committed staging is already removed. The removal is itself
+   remembered, and id sequence stays intact. Caveat stated honestly: the
+   ledger lives in git; `redact` cleans current `.priors` data, and scrubbing
+   git history is a documented separate step.
 
 The unifying rule, sibling to the ratchet: a prior may stop *acting*, stop
 *appearing*, or have its content *removed* — but the record that it existed,

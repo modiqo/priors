@@ -8,6 +8,16 @@ SRC="$(cd "$(dirname "$0")" && pwd)"
 KEEPER="$SRC/skills/priors/scripts/priors.mjs"
 found=0
 
+if ! command -v node >/dev/null 2>&1; then
+  echo "priors requires node >= 18, but node was not found." >&2
+  exit 1
+fi
+NODE_MAJOR="$(node -p 'Number(process.versions.node.split(".")[0])')"
+if [ "$NODE_MAJOR" -lt 18 ]; then
+  echo "priors requires node >= 18; found $(node --version)." >&2
+  exit 1
+fi
+
 # Claude Code (and anything else reading ~/.claude/skills)
 if [ -d "$HOME/.claude" ]; then
   mkdir -p "$HOME/.claude/skills" "$HOME/.claude/commands"
@@ -35,4 +45,4 @@ echo "Keeper path for adapters: $KEEPER"
 if [ "$found" -eq 0 ]; then
   echo "No skills directory detected — that's fine: the adapters above are the install."
 fi
-echo "Only requirement anywhere: node >= 18."
+echo "Runtime verified: $(node --version) (node >= 18 required)."
