@@ -178,29 +178,22 @@ The same commands work inside Claude Code when entered as slash commands.
 
 ### Codex
 
-Inside a Codex session, `skill-installer` (ships with Codex) pulls the skill
-straight from GitHub into `~/.codex/skills/`:
-
-```text
-$skill-installer conikeec/priors/skills/priors
-```
-
-To also get the `/with-priors` prompt:
-
 ```bash
-curl -fsSL --create-dirs -o ~/.codex/prompts/with-priors.md \
-  https://raw.githubusercontent.com/conikeec/priors/main/commands/with-priors.md
+codex plugin marketplace add conikeec/priors
+codex plugin add priors@priors-marketplace
 ```
 
-Confirm with `/skills`; invoke explicitly with `$priors`. For a repo-scoped
-install that leaves `~/.codex` untouched, paste `adapters/AGENTS-snippet.md`
-into the repository's `AGENTS.md` instead.
+Codex reads the same marketplace manifest as Claude Code, so the plugin —
+skill included — installs in two commands (verified with codex-cli 0.144).
+Confirm with `codex plugin list`; the skill loads as `priors:priors`. For a
+repo-scoped install that leaves `~/.codex` untouched, paste
+`adapters/AGENTS-snippet.md` into the repository's `AGENTS.md` instead.
 
 ### Kimi CLI
 
-Nothing to install. Kimi Code CLI reads `~/.claude/skills/` and
-`~/.codex/skills/` natively, so either install above already covers it.
-Standalone, run `./install.sh` (below) or point Kimi at a clone with
+Kimi Code CLI reads `~/.claude/skills/` and `~/.codex/skills/` natively, so
+`./install.sh` (below) — which installs into both — covers Kimi with no
+Kimi-specific step. Or point Kimi at a clone directly with
 `kimi --skills-dir <clone>/skills`.
 
 ### Other agent harnesses
@@ -217,8 +210,8 @@ into each one it finds.
 | Harness | Integration |
 |---|---|
 | **Claude Code** | Native plugin, or the generic installer |
-| **Codex** | `$skill-installer conikeec/priors/skills/priors`, or `adapters/AGENTS-snippet.md` in the target `AGENTS.md` |
-| **Kimi CLI** | Reads `~/.claude/skills/` and `~/.codex/skills/` natively — either install above covers it |
+| **Codex** | Native plugin via `codex plugin marketplace add`, or `adapters/AGENTS-snippet.md` in the target `AGENTS.md` |
+| **Kimi CLI** | `install.sh` — Kimi reads `~/.claude/skills/` and `~/.codex/skills/` natively |
 | **OpenClaw** and other Agent-Skills harnesses | Agent Skill installed by `install.sh`, or point them at `skills/priors/` |
 | **Hermes / shell-capable agents** | Add `adapters/system-prompt.md` to the system prompt |
 

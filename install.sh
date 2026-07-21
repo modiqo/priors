@@ -63,8 +63,8 @@ fi
 
 echo ""
 echo "Not detected above? The protocol is identical everywhere:"
-echo "  → Codex:      run codex once (creates ~/.codex) and re-run this, or paste"
-echo "                adapters/AGENTS-snippet.md into your repo's AGENTS.md"
+echo "  → Codex:      codex plugin marketplace add conikeec/priors"
+echo "                codex plugin add priors@priors-marketplace"
 echo "  → Kimi CLI:   also reads ~/.claude/skills and ~/.codex/skills natively —"
 echo "                an install for either harness above covers Kimi too"
 echo "  → Other       Agent-Skills harnesses: point them at $SRC/skills/priors"
