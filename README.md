@@ -178,31 +178,30 @@ The same commands work inside Claude Code when entered as slash commands.
 
 ### Codex
 
-```bash
-git clone https://github.com/conikeec/priors
-cd priors
-mkdir -p ~/.codex/skills ~/.codex/prompts
-cp -R skills/priors ~/.codex/skills/
-cp commands/with-priors.md ~/.codex/prompts/
+Inside a Codex session, `skill-installer` (ships with Codex) pulls the skill
+straight from GitHub into `~/.codex/skills/`:
+
+```text
+$skill-installer conikeec/priors/skills/priors
 ```
 
-Codex picks the skill up automatically — invoke it explicitly with `$priors`
-(list installed skills with `/skills`), or use the `/with-priors` custom
-prompt. If `CODEX_HOME` is set, substitute it for `~/.codex`. For a
-repo-scoped install that leaves `~/.codex` untouched, paste
-`adapters/AGENTS-snippet.md` into the repository's `AGENTS.md` instead.
+To also get the `/with-priors` prompt:
+
+```bash
+curl -fsSL --create-dirs -o ~/.codex/prompts/with-priors.md \
+  https://raw.githubusercontent.com/conikeec/priors/main/commands/with-priors.md
+```
+
+Confirm with `/skills`; invoke explicitly with `$priors`. For a repo-scoped
+install that leaves `~/.codex` untouched, paste `adapters/AGENTS-snippet.md`
+into the repository's `AGENTS.md` instead.
 
 ### Kimi CLI
 
-```bash
-git clone https://github.com/conikeec/priors
-cd priors
-mkdir -p ~/.kimi-code/skills
-cp -R skills/priors ~/.kimi-code/skills/
-```
-
-Kimi Code CLI loads user-level skills from `~/.kimi-code/skills/` (or
-`$KIMI_CODE_HOME/skills/` if that variable is set).
+Nothing to install. Kimi Code CLI reads `~/.claude/skills/` and
+`~/.codex/skills/` natively, so either install above already covers it.
+Standalone, run `./install.sh` (below) or point Kimi at a clone with
+`kimi --skills-dir <clone>/skills`.
 
 ### Other agent harnesses
 
@@ -213,14 +212,13 @@ cd priors
 ```
 
 The installer detects Claude Code, OpenClaw, Codex, and Kimi CLI and installs
-into each one it finds — so it is also the one-command path for the two
-harnesses above.
+into each one it finds.
 
 | Harness | Integration |
 |---|---|
 | **Claude Code** | Native plugin, or the generic installer |
-| **Codex** | Skill in `~/.codex/skills/`, or `adapters/AGENTS-snippet.md` in the target `AGENTS.md` |
-| **Kimi CLI** | Skill in `~/.kimi-code/skills/` (or `$KIMI_CODE_HOME/skills/`) |
+| **Codex** | `$skill-installer conikeec/priors/skills/priors`, or `adapters/AGENTS-snippet.md` in the target `AGENTS.md` |
+| **Kimi CLI** | Reads `~/.claude/skills/` and `~/.codex/skills/` natively — either install above covers it |
 | **OpenClaw** and other Agent-Skills harnesses | Agent Skill installed by `install.sh`, or point them at `skills/priors/` |
 | **Hermes / shell-capable agents** | Add `adapters/system-prompt.md` to the system prompt |
 
