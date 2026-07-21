@@ -8,12 +8,12 @@
   </defs>
   <rect width="1200" height="700" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">FINANCE</text>
-  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Remember the review. Keep authority with the controls.</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34"><tspan>Remember the review.</tspan><tspan dx="9">Keep authority with the controls.</tspan></text>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <text x="52" y="145" font-size="13" letter-spacing="2" fill="#47645C">CANONICAL FINANCIAL IDENTITY</text>
     <rect x="52" y="164" width="260" height="336" rx="22" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
-    <g font-size="14" font-weight="700" fill="#173B34">
+    <g font-size="13" font-weight="700" fill="#173B34">
       <rect x="80" y="202" width="204" height="48" rx="12" fill="#E1ECE7"/><text x="182" y="232" text-anchor="middle">report definition + query</text>
       <rect x="80" y="264" width="204" height="48" rx="12" fill="#E1ECE7"/><text x="182" y="294" text-anchor="middle">parameters + cutoff</text>
       <rect x="80" y="326" width="204" height="48" rx="12" fill="#E1ECE7"/><text x="182" y="356" text-anchor="middle">source data snapshot</text>
@@ -43,7 +43,7 @@
 
     <text x="900" y="145" font-size="13" letter-spacing="2" fill="#47645C">CONTROLLED ACTION DOMAIN</text>
     <rect x="890" y="164" width="258" height="336" rx="22" fill="#FFFDFC" stroke="#D95D24" stroke-width="3"/>
-    <g font-size="14" font-weight="700" fill="#173B34">
+    <g font-size="13" font-weight="700" fill="#173B34">
       <text x="1019" y="203" text-anchor="middle" font-size="12" letter-spacing="1.5" fill="#D95D24">AUTHORITATIVE</text>
       <rect x="918" y="222" width="202" height="42" rx="11" fill="#F7E0D3"/><text x="1019" y="248" text-anchor="middle">system of record</text>
       <rect x="918" y="276" width="202" height="42" rx="11" fill="#F7E0D3"/><text x="1019" y="302" text-anchor="middle">maker-checker approval</text>

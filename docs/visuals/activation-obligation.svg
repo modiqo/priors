@@ -10,7 +10,11 @@
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">ACTIVATION × OBLIGATION</text>
   <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">When memory enters determines what the run must do.</text>
 
-  <line x1="110" y1="300" x2="1090" y2="300" stroke="#8DA49C" stroke-width="4" marker-end="url(#arrow)"/>
+  <g stroke="#8DA49C" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M214 300 H466"/>
+    <path d="M534 300 H786"/>
+    <path d="M854 300 H1036"/>
+  </g>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <g transform="translate(180 0)">

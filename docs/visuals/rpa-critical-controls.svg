@@ -5,10 +5,13 @@
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0 0 L10 5 L0 10 Z" fill="#173B34"/>
     </marker>
+    <marker id="light-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#BFDCCF"/>
+    </marker>
   </defs>
   <rect width="1200" height="720" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">ROBOTIC PROCESS AUTOMATION</text>
-  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">Memory guides the reviewer. Controls govern the action.</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34"><tspan>Memory guides the reviewer.</tspan><tspan dx="9">Controls govern the action.</tspan></text>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <rect x="52" y="132" width="1096" height="168" rx="22" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>
@@ -25,11 +28,11 @@
     <text x="600" y="378" text-anchor="middle" font-size="13" letter-spacing="2" fill="#BFDCCF">AGENT REVIEW RUN</text>
     <g font-size="14" font-weight="700" fill="#FFFDFC">
       <circle cx="292" cy="417" r="24" fill="#2F7967"/><text x="292" y="422" text-anchor="middle">1</text><text x="292" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">inject</text>
-      <path d="M326 417 H417" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M326 417 H417" stroke="#BFDCCF" stroke-width="2" marker-end="url(#light-arrow)"/>
       <circle cx="451" cy="417" r="24" fill="#D95D24"/><text x="451" y="422" text-anchor="middle">2</text><text x="451" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">re-check</text>
-      <path d="M485 417 H576" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M485 417 H576" stroke="#BFDCCF" stroke-width="2" marker-end="url(#light-arrow)"/>
       <circle cx="610" cy="417" r="24" fill="#E9C46A"/><text x="610" y="422" text-anchor="middle" fill="#173B34">3</text><text x="610" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">validate</text>
-      <path d="M644 417 H735" stroke="#BFDCCF" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M644 417 H735" stroke="#BFDCCF" stroke-width="2" marker-end="url(#light-arrow)"/>
       <circle cx="769" cy="417" r="24" fill="#2F7967"/><text x="769" y="422" text-anchor="middle">4</text><text x="769" y="451" text-anchor="middle" font-size="12" fill="#BFDCCF">commit</text>
       <text x="900" y="423" text-anchor="middle" font-size="13" fill="#BFDCCF">observable review</text>
     </g>

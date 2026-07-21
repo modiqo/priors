@@ -8,7 +8,7 @@
   </defs>
   <rect width="1200" height="650" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">OPEN VOCABULARY · CLOSED BEHAVIORAL GRAMMAR</text>
-  <text x="52" y="91" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#173B34">Name the domain. Compose the consequence.</text>
+  <text x="52" y="91" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="700" fill="#173B34"><tspan>Name the domain.</tspan><tspan dx="9">Compose the consequence.</tspan></text>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <text x="64" y="148" font-size="13" letter-spacing="2" fill="#47645C">DOMAIN NOUNS</text>
@@ -39,7 +39,7 @@
       <text x="671" y="330" text-anchor="middle" font-weight="700" fill="#FFFDFC">verify-phase</text>
       <text x="425" y="380" fill="#BFDCCF">obligation</text>
       <rect x="570" y="355" width="202" height="36" rx="18" fill="#284E45"/>
-      <text x="671" y="379" text-anchor="middle" font-weight="700" fill="#FFFDFC">disposition-required</text>
+      <text x="671" y="379" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFDFC">disposition-required</text>
       <text x="425" y="429" fill="#BFDCCF">authority</text>
       <rect x="570" y="404" width="202" height="36" rx="18" fill="#284E45"/>
       <text x="671" y="428" text-anchor="middle" font-weight="700" fill="#FFFDFC">advisory at birth</text>

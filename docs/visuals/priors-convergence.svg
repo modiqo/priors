@@ -38,7 +38,8 @@
 
     <circle cx="489" cy="202" r="16" fill="#E9C46A"/>
     <text x="489" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#173B34">2</text>
-    <text x="626" y="208" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFDFC">Priors records consequences</text>
+    <text x="520" y="198" font-size="16" font-weight="700" fill="#FFFDFC">Priors records</text>
+    <text x="520" y="219" font-size="16" font-weight="700" fill="#FFFDFC">consequences</text>
     <text x="489" y="249" font-size="14" letter-spacing="2" fill="#BFDCCF">APPEND-ONLY LEDGER</text>
 
     <rect x="489" y="270" width="222" height="54" rx="10" fill="#284E45"/>
@@ -57,8 +58,9 @@
 
     <circle cx="890" cy="218" r="16" fill="#2F7967"/>
     <text x="890" y="224" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFDFC">3</text>
-    <text x="918" y="224" font-size="20" font-weight="700" fill="#173B34">Begin from what is settled</text>
-    <text x="886" y="264" font-size="14" font-weight="700" fill="#173B34">BEFORE NEW ADVICE</text>
+    <text x="918" y="214" font-size="18" font-weight="700" fill="#173B34">Begin from</text>
+    <text x="918" y="236" font-size="18" font-weight="700" fill="#173B34">settled state</text>
+    <text x="886" y="270" font-size="14" font-weight="700" fill="#173B34">BEFORE NEW ADVICE</text>
 
     <g font-size="14" fill="#173B34">
       <circle cx="895" cy="300" r="10" fill="#BFDCCF"/><path d="M890 300 l4 4 7-8" fill="none" stroke="#173B34" stroke-width="2"/>

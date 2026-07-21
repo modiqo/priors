@@ -11,7 +11,7 @@
   </defs>
   <rect width="1200" height="620" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">AUTHORITY + LIFECYCLE</text>
-  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">The agent can observe. Only a human can make judgment stick.</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34"><tspan>The agent can observe.</tspan><tspan dx="9">Only a human can make judgment stick.</tspan></text>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <rect x="52" y="145" width="258" height="118" rx="18" fill="#FFFDFC" stroke="#B9C8C2" stroke-width="2"/>

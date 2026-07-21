@@ -8,9 +8,14 @@
   </defs>
   <rect width="1200" height="520" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">THE CONFORMING RUN</text>
-  <text x="52" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#173B34">Five observable steps. One fail-closed finish.</text>
+  <text x="52" y="88" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="700" fill="#173B34"><tspan>Five observable steps.</tspan><tspan dx="9">One fail-closed finish.</tspan></text>
 
-  <path d="M154 242 H1046" stroke="#8DA49C" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <g stroke="#8DA49C" stroke-width="3" fill="none" marker-end="url(#arrow)">
+    <path d="M180 242 H313"/>
+    <path d="M415 242 H548"/>
+    <path d="M650 242 H783"/>
+    <path d="M885 242 H1018"/>
+  </g>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <g transform="translate(130 0)">

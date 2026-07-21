@@ -3,7 +3,7 @@
   <desc id="desc">Clinical operations, aerospace, privacy, incident response, and data migration each use Priors for findings, review depth, doctrine, and procedures while retaining domain-specific external authority.</desc>
   <rect width="1200" height="660" rx="28" fill="#F4F0E5"/>
   <text x="52" y="50" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" letter-spacing="3" fill="#47645C">OTHER HIGH-ASSURANCE DOMAINS</text>
-  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34">The memory pattern transfers. Authority does not.</text>
+  <text x="52" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="29" font-weight="700" fill="#173B34"><tspan>The memory pattern transfers.</tspan><tspan dx="9">Authority does not.</tspan></text>
 
   <g font-family="system-ui, -apple-system, sans-serif">
     <text x="62" y="139" font-size="12.5" letter-spacing="2" fill="#47645C">DOMAIN</text>
