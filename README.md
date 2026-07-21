@@ -176,6 +176,34 @@ claude plugin install priors@priors-marketplace
 
 The same commands work inside Claude Code when entered as slash commands.
 
+### Codex
+
+```bash
+git clone https://github.com/conikeec/priors
+cd priors
+mkdir -p ~/.codex/skills ~/.codex/prompts
+cp -R skills/priors ~/.codex/skills/
+cp commands/with-priors.md ~/.codex/prompts/
+```
+
+Codex picks the skill up automatically — invoke it explicitly with `$priors`
+(list installed skills with `/skills`), or use the `/with-priors` custom
+prompt. If `CODEX_HOME` is set, substitute it for `~/.codex`. For a
+repo-scoped install that leaves `~/.codex` untouched, paste
+`adapters/AGENTS-snippet.md` into the repository's `AGENTS.md` instead.
+
+### Kimi CLI
+
+```bash
+git clone https://github.com/conikeec/priors
+cd priors
+mkdir -p ~/.kimi-code/skills
+cp -R skills/priors ~/.kimi-code/skills/
+```
+
+Kimi Code CLI loads user-level skills from `~/.kimi-code/skills/` (or
+`$KIMI_CODE_HOME/skills/` if that variable is set).
+
 ### Other agent harnesses
 
 ```bash
@@ -184,12 +212,16 @@ cd priors
 ./install.sh
 ```
 
+The installer detects Claude Code, OpenClaw, Codex, and Kimi CLI and installs
+into each one it finds — so it is also the one-command path for the two
+harnesses above.
+
 | Harness | Integration |
 |---|---|
 | **Claude Code** | Native plugin, or the generic installer |
-| **OpenClaw** | Agent Skill installed by `install.sh` |
-| **Kimi CLI** and Agent-Skills harnesses | Use `skills/priors/` |
-| **Codex** | Add `adapters/AGENTS-snippet.md` to the target `AGENTS.md` |
+| **Codex** | Skill in `~/.codex/skills/`, or `adapters/AGENTS-snippet.md` in the target `AGENTS.md` |
+| **Kimi CLI** | Skill in `~/.kimi-code/skills/` (or `$KIMI_CODE_HOME/skills/`) |
+| **OpenClaw** and other Agent-Skills harnesses | Agent Skill installed by `install.sh`, or point them at `skills/priors/` |
 | **Hermes / shell-capable agents** | Add `adapters/system-prompt.md` to the system prompt |
 
 The ledger format is the same across harnesses. If `.priors/` is committed,

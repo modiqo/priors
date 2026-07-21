@@ -35,10 +35,38 @@ if [ -d "$HOME/.openclaw" ]; then
   found=1
 fi
 
+# Codex CLI (skills + custom prompts; honors CODEX_HOME)
+CODEX_DIR="${CODEX_HOME:-$HOME/.codex}"
+if [ -d "$CODEX_DIR" ]; then
+  mkdir -p "$CODEX_DIR/skills" "$CODEX_DIR/prompts"
+  cp -R "$SRC/skills/priors" "$CODEX_DIR/skills/"
+  cp "$SRC/commands/with-priors.md" "$CODEX_DIR/prompts/"
+  echo "✓ Codex — skill 'priors' + /with-priors prompt installed ($CODEX_DIR)"
+  found=1
+fi
+
+# Kimi Code CLI (Agent Skills native; honors KIMI_CODE_HOME)
+KIMI_DIR=""
+if [ -n "${KIMI_CODE_HOME:-}" ] && [ -d "$KIMI_CODE_HOME" ]; then
+  KIMI_DIR="$KIMI_CODE_HOME"
+elif [ -d "$HOME/.kimi-code" ]; then
+  KIMI_DIR="$HOME/.kimi-code"
+elif [ -d "$HOME/.kimi" ]; then
+  KIMI_DIR="$HOME/.kimi"
+fi
+if [ -n "$KIMI_DIR" ]; then
+  mkdir -p "$KIMI_DIR/skills"
+  cp -R "$SRC/skills/priors" "$KIMI_DIR/skills/"
+  echo "✓ Kimi CLI — skill 'priors' installed ($KIMI_DIR/skills)"
+  found=1
+fi
+
 echo ""
-echo "For harnesses without a skills directory (the protocol is identical everywhere):"
-echo "  → Codex:      paste adapters/AGENTS-snippet.md into your repo's AGENTS.md"
-echo "  → Kimi CLI &  other Agent-Skills harnesses: point them at $SRC/skills/priors"
+echo "Not detected above? The protocol is identical everywhere:"
+echo "  → Codex:      run codex once (creates ~/.codex) and re-run this, or paste"
+echo "                adapters/AGENTS-snippet.md into your repo's AGENTS.md"
+echo "  → Kimi CLI:   run kimi once (creates ~/.kimi-code) and re-run this"
+echo "  → Other       Agent-Skills harnesses: point them at $SRC/skills/priors"
 echo "  → Anything    with a shell (Hermes, custom): use adapters/system-prompt.md"
 echo ""
 echo "Keeper path for adapters: $KEEPER"
